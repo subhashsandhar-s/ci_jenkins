@@ -41,7 +41,7 @@ pipeline {
 
         stage('Deploy (Simulation)') {
             steps {
-                echo 'Deploying application need to go real1'
+                echo 'Deploying application need to go real'
             }
         }
     }
