@@ -1,3 +1,3 @@
-module github.com/subhashsandhars/ci_practice
+module github.com/learnings/ci_jenkins
 
 go 1.23.4
