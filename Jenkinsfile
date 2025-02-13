@@ -18,6 +18,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'go build -o my_app main.go'
+                archiveArtifacts artifacts: 'my_app', fingerprint: true
             }
         }
     
