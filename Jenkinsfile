@@ -24,8 +24,18 @@ pipeline {
     
 
         stage('Test') {
-            steps {
-                sh 'go test ./...'
+            parallel {
+                stage('Static analysis') {
+                    steps{
+                        sh 'golangci-lint run'            
+                    }
+                }
+                stage('Unit test') {
+                    steps {
+                        sh 'go test ./...'
+                    }
+                }
+                
             }
         }
 
